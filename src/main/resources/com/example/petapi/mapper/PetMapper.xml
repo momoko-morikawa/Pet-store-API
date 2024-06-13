@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.petapi.mapper.PetMapper">
-<insert id="addPet" useGeneratedKeys="true" keyProperty="id">
-	INSERT INTO 
-</insert>
+	<insert id="addPet" useGeneratedKeys="true" keyProperty="id">
+	</insert>
+	<select id="showAll" resultType="com.example.petapi.entity.Pet">
+		select *
+		from pets inner join category on pets.CATEGORY_ID = category.CATEGORY_ID
+		inner join photoUrl on pets.PHOTO_URL_ID = photoUrl.PHOTO_URL_ID
+		inner join tags on pets.TAGS_ID = tags.TAGS_ID
+	</select>
 </mapper>
