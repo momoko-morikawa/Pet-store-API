@@ -4,14 +4,14 @@ import lombok.Data;
 
 @Data
 public class Tags {
-	private int tags_id;
-	private String tags_name;
+	private int id;
+	private String name;
 	
 	Tags(){
 		
 	}
 	
-	Tags(int tags_id, String tags_name) {
+	Tags(int id, String name) {
 		
 	}
 }

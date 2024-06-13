@@ -1,24 +1,14 @@
-INSERT INTO pets (CATEGORY_ID, NAME, PHOTO_URL_ID, TAGS_ID, STATUS)
-VALUES(1, 'ポチ', 1, 1, 1);
+INSERT INTO category (id, name)
+VALUES (0, 'Category1'),
+       (1, 'Category2');
+
+INSERT INTO tags (id, name)
+VALUES (0, 'Tag1'),
+       (1, 'Tag2'),
+       (2, 'Tag3');
 
 
-INSERT INTO category (CATEGORY)
-VALUES('犬');
-INSERT INTO category (CATEGORY)
-VALUES('猫');
-INSERT INTO category (CATEGORY)
-VALUES('ハムスター');
-
-INSERT INTO photoURL (PHOTO_URL)
-VALUES('url1');
-INSERT INTO photoURL (PHOTO_URL)
-VALUES('url2');
-INSERT INTO photoURL (PHOTO_URL)
-VALUES('url3');
-
-INSERT INTO tags (TAGS)
-VALUES('tag1');
-INSERT INTO tags (TAGS)
-VALUES('tag2');
-INSERT INTO tags (TAGS)
-VALUES('tag3');
+INSERT INTO pets (id, category_id, name, photoUrls, status, tag_id)
+VALUES (0, 0, 'Pet1', 'https://example.com/pet1.jpg', 'available', 0), 
+       (1, 1, 'Pet2', 'https://example.com/pet2.jpg', 'pending', 1),   
+       (2, 0, 'Pet3', 'https://example.com/pet3.jpg', 'sold', 2);  

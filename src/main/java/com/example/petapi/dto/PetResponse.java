@@ -1,16 +1,15 @@
 package com.example.petapi.dto;
 
-import com.example.petapi.entity.Category;
-import com.example.petapi.entity.Tags;
+import java.util.List;
 
 import lombok.Data;
 
 @Data
 public class PetResponse {
 	private int id;
-	private Category category;
+	private CategoryResponse category;
 	private String name;
-	private String[] photoUrls;
-	private Tags[] tags;
+	private List<String> photoUrls;
+	private List<TagResponse> tags;
 	private String status;
 }
