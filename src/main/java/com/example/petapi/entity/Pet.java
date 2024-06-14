@@ -10,14 +10,14 @@ public class Pet {
 	private Category category;
 	private String name;
 	private List<String> photoUrls;
-	private List<Tags> tags;
+	private List<Tag> tags;
 	private String status;
 	
-	public Pet() {
+	public Pet(){
 		
 	}
 
-	public Pet(int id, Category category, String name, List<String> photoUrls, List<Tags> tags, String status) {
+	public Pet(int id, Category category, String name, List<String> photoUrls, List<Tag> tags, String status) {
 		super();
 		this.id = id;
 		this.category = category;
@@ -26,8 +26,6 @@ public class Pet {
 		this.tags = tags;
 		this.status = status;
 	}
-	
-	
 	
 	
 }
